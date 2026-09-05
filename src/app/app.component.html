@@ -1,0 +1,27 @@
+<h3 [ngStyle]="{'color':'red','background-color':'green','font-size':'30px'}">app component</h3><br>
+<input  [(ngModel)]="inputValue" (keydown)="keyupFun()"/><br>
+{{inputValue}}<br><br>
+
+<h2>class bindings example ways1 : </h2>
+<p [class]="(paraStatus?'success':'failure')">this is paragraph</p>
+
+<p [class.error]="true">this is paragraph 1</p>
+
+<p [class.success]="funSuccess()">this is paragraph 2</p>
+
+
+<h2>style bindings example ways : </h2>
+<p [style]="{'color':'cyan','background-color':'green'}">this is paragraph related to style bindings - 1 way</p>
+ 
+<p [style]="dynamicStyles">this is paragraph related to style bindings - 2 way</p>
+
+<p [style.color]="'red'">this is paragraph related to style bindings - 3 way</p>
+
+<p [style.font-size.px]="60">this is paragraph related to style bindings - 4 way</p>
+<h2>json pipe:</h2>
+{{jsonObj|json}}<br>
+<div ngNonBindable>{{{{}}}}</div>
+<div> {{'kiran'}}</div>
+
+
+
